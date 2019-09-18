@@ -973,10 +973,12 @@
     "@nodelib/fs.scandir" "2.1.2"
     fastq "^1.6.0"
 
-"@notabug/chaingun@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@notabug/chaingun/-/chaingun-0.0.2.tgz#8ed198751dee12a2ba0751e5838331fab204c5c9"
-  integrity sha512-a+BPg9PwiLUHHBF1Gg9CsfamLw5ZXQRu4ftlk5o9hr296aWHIbAZlNI2aOH5oCief02ysa08jEWFFVuraf7tfg==
+"@notabug/chaingun@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@notabug/chaingun/-/chaingun-0.0.7.tgz#c1b2734a96de0178827a805c216a881c3a258366"
+  integrity sha512-X5PjpQGcoQprDcO916Az8I6Vziyjf9i8UdJay0u64DtgDARnOs+mvkgnFskUi/49DCvwMMNGBD+80A/pG+dL+g==
+  dependencies:
+    reconnecting-websocket "^4.2.0"
 
 "@notabug/gun-sear@^0.0.10":
   version "0.0.10"
@@ -6994,6 +6996,11 @@ rechoir@^0.6.2:
   integrity sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=
   dependencies:
     resolve "^1.1.6"
+
+reconnecting-websocket@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/reconnecting-websocket/-/reconnecting-websocket-4.2.0.tgz#2395f84b5d0acee439ff5df34c3fd0853d11be7c"
+  integrity sha512-HMD8A0sv40xhkHf/T4qxktyOvHx7K3d2A9i1QG2wRIYdMecxQJMhTIBH4aQ8KfQLfQW4UOqNSfxTgv0C+MbPIA==
 
 redent@^2.0.0:
   version "2.0.0"
