@@ -980,10 +980,10 @@
   dependencies:
     reconnecting-websocket "^4.2.0"
 
-"@notabug/gun-sear@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@notabug/gun-sear/-/gun-sear-0.0.12.tgz#49b821a305a38a3e93acd4ed50f3e2ade64384ff"
-  integrity sha512-iXWaZkzbfqxRZ3y0G70rm4S7zw5IT2NHLXD3o/nPZA53PSBSNFdx2xt+rVsJEBW0GuD4naPLfXKJ0seja7IVWA==
+"@notabug/gun-sear@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@notabug/gun-sear/-/gun-sear-0.0.13.tgz#8423969206de2ff5d09313f9e5c3be1273ce98a6"
+  integrity sha512-o0abyYw2h+m3+O7v8pEWhlc70u4NMGthF1XjuAv3D21vlPSHoozr4fLRJr+A9juVlaB/Tcz8ueNXdvkUmxL8zA==
   dependencies:
     "@peculiar/webcrypto" "^1.0.19"
     "@types/window-or-global" "^1.0.0"
