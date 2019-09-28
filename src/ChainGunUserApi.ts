@@ -62,7 +62,7 @@ export class ChainGunUserApi {
    * @param cb
    * @param opt
    */
-  async auth(alias: string, password: string, cb: LoginCallback, opt = DEFAULT_AUTH_OPTS) {
+  async auth(alias: string, password: string, cb?: LoginCallback, opt = DEFAULT_AUTH_OPTS) {
     try {
       const user = await authenticate(this._gun, alias, password)
       const ref = this.useCredentials(user)

@@ -973,10 +973,10 @@
     "@nodelib/fs.scandir" "2.1.2"
     fastq "^1.6.0"
 
-"@notabug/chaingun@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@notabug/chaingun/-/chaingun-0.0.11.tgz#8778b899bee75c41c37d6f429fe6ee3b46d816a1"
-  integrity sha512-Jv684irb3UgSxMHohkJzGzAZ5ESkKvkJt1KRwuzYPcW7iPDc9mv7kC26Yko1nPWIphf4FDgApFBLfR254QL75g==
+"@notabug/chaingun@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@notabug/chaingun/-/chaingun-0.0.12.tgz#fcc1ddcd70af0201d0129f4eafbbdc0dc79f0d37"
+  integrity sha512-StpfRcBO3n8Sn4fXPxPE0WkLDI6zKZMhhybEvozTlQ1iT2WZsdb0mazBaF80OJXLv2tGxwROxZKTMDNuQlvD8w==
   dependencies:
     reconnecting-websocket "^4.2.0"
 
