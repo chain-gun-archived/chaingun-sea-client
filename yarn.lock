@@ -973,17 +973,17 @@
     "@nodelib/fs.scandir" "2.1.2"
     fastq "^1.6.0"
 
-"@notabug/chaingun@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@notabug/chaingun/-/chaingun-0.0.10.tgz#d5bbcc42fc579b930ee3be9006238752610150a1"
-  integrity sha512-W8kBbEjc7OAXrshINvchwMFPWFxKAeV5KSh/kJC918nBnv8dfEeqCEk1XLh+dyNpmpgx3AhPEoBs5jq3kN4Z2A==
+"@notabug/chaingun@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@notabug/chaingun/-/chaingun-0.0.11.tgz#8778b899bee75c41c37d6f429fe6ee3b46d816a1"
+  integrity sha512-Jv684irb3UgSxMHohkJzGzAZ5ESkKvkJt1KRwuzYPcW7iPDc9mv7kC26Yko1nPWIphf4FDgApFBLfR254QL75g==
   dependencies:
     reconnecting-websocket "^4.2.0"
 
-"@notabug/gun-sear@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@notabug/gun-sear/-/gun-sear-0.0.13.tgz#8423969206de2ff5d09313f9e5c3be1273ce98a6"
-  integrity sha512-o0abyYw2h+m3+O7v8pEWhlc70u4NMGthF1XjuAv3D21vlPSHoozr4fLRJr+A9juVlaB/Tcz8ueNXdvkUmxL8zA==
+"@notabug/gun-sear@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@notabug/gun-sear/-/gun-sear-0.0.14.tgz#1e8f178c175b443b52379734f43794684f7db811"
+  integrity sha512-R1FRfXuf3Q+xJ1R/sW9qG3Cp9BqCWukUSNIBH0ySMmaenxIVQFL7xGwxFFPU5G1rqwKxGS9H8Ihqqi2PwmuPlA==
   dependencies:
     "@peculiar/webcrypto" "^1.0.19"
     "@types/window-or-global" "^1.0.0"
