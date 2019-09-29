@@ -11,7 +11,9 @@ export class ChainGunSear extends ChainGun {
   }
 
   registerSearMiddleware() {
-    this.graph.use(unpackGraph)
+    this.graph.use(graph =>
+      unpackGraph(graph, (<any>this.graph)._opt.mutable ? 'mutable' : 'immutable')
+    )
   }
 
   user() {
