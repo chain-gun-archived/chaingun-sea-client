@@ -1,6 +1,6 @@
 {
   "name": "@notabug/chaingun-sear",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "SEA support for ChainGun",
   "keywords": [],
   "main": "dist/@notabug/chaingun-sear.umd.js",
@@ -119,6 +119,6 @@
   },
   "dependencies": {
     "@notabug/chaingun": "^0.0.17",
-    "@notabug/gun-sear": "^0.0.18"
+    "@notabug/gun-sear": "^0.0.19"
   }
 }
