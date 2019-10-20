@@ -1,21 +1,21 @@
-import { ChainGunSear } from './ChainGunSear'
-import { createUser, authenticate, graphSigner } from '@notabug/gun-sear'
+import { authenticate, createUser, graphSigner } from '@chaingun/sear'
+import { ChainGunSeaClient } from './ChainGunSeaClient'
 
 interface UserReference {
-  alias: string
-  pub: string
+  readonly alias: string
+  readonly pub: string
 }
 
 interface AckErr {
-  err: Error
+  readonly err: Error
 }
 
 interface UserCredentials {
-  priv: string
-  epriv: any
-  alias: string
-  pub: string
-  epub: string
+  readonly priv: string
+  readonly epriv: any
+  readonly alias: string
+  readonly pub: string
+  readonly epub: string
 }
 
 type LoginCallback = (userRef: UserReference | AckErr) => void
@@ -24,11 +24,11 @@ const DEFAULT_CREATE_OPTS = {}
 const DEFAULT_AUTH_OPTS = {}
 
 export class ChainGunUserApi {
-  is?: UserReference
-  private _gun: ChainGunSear
-  private _signMiddleware?: (graph: any) => Promise<any>
+  public readonly is?: UserReference
+  private readonly _gun: ChainGunSeaClient
+  private readonly _signMiddleware?: (graph: any) => Promise<any>
 
-  constructor(gun: ChainGunSear) {
+  constructor(gun: ChainGunSeaClient) {
     this._gun = gun
   }
 
@@ -41,14 +41,26 @@ export class ChainGunUserApi {
    * @param cb
    * @param opt
    */
-  async create(alias: string, password: string, cb?: LoginCallback, opt = DEFAULT_CREATE_OPTS) {
+  public async create(
+    alias: string,
+    password: string,
+    cb?: LoginCallback,
+    _opt = DEFAULT_CREATE_OPTS
+  ): Promise<{
+    readonly alias: string
+    readonly pub: string
+  }> {
     try {
       const user = await createUser(this._gun, alias, password)
       const ref = this.useCredentials(user)
-      if (cb) cb(ref)
+      if (cb) {
+        cb(ref)
+      }
       return ref
     } catch (err) {
-      if (cb) cb({ err })
+      if (cb) {
+        cb({ err })
+      }
       throw err
     }
   }
@@ -62,14 +74,26 @@ export class ChainGunUserApi {
    * @param cb
    * @param opt
    */
-  async auth(alias: string, password: string, cb?: LoginCallback, opt = DEFAULT_AUTH_OPTS) {
+  public async auth(
+    alias: string,
+    password: string,
+    cb?: LoginCallback,
+    _opt = DEFAULT_AUTH_OPTS
+  ): Promise<{
+    readonly alias: string
+    readonly pub: string
+  }> {
     try {
       const user = await authenticate(this._gun, alias, password)
       const ref = this.useCredentials(user)
-      if (cb) cb(ref)
+      if (cb) {
+        cb(ref)
+      }
       return ref
     } catch (err) {
-      if (cb) cb({ err })
+      if (cb) {
+        cb({ err })
+      }
       throw err
     }
   }
@@ -77,21 +101,36 @@ export class ChainGunUserApi {
   /**
    * https://gun.eco/docs/User#user-leave
    */
-  leave() {
+  public leave(): ChainGunUserApi {
     if (this._signMiddleware) {
       this._gun.graph.unuse(this._signMiddleware, 'write')
+      // @ts-ignore
+      // tslint:disable-next-line: no-object-mutation
       this._signMiddleware = undefined
+      // @ts-ignore
+      // tslint:disable-next-line: no-object-mutation
       this.is = undefined
     }
+
+    return this
   }
 
-  useCredentials(credentials: UserCredentials) {
+  public useCredentials(
+    credentials: UserCredentials
+  ): {
+    readonly alias: string
+    readonly pub: string
+  } {
     this.leave()
+    // @ts-ignore
+    // tslint:disable-next-line: no-object-mutation
     this._signMiddleware = graphSigner({
-      pub: credentials.pub,
-      priv: credentials.priv
+      priv: credentials.priv,
+      pub: credentials.pub
     })
     this._gun.graph.use(this._signMiddleware, 'write')
+    // @ts-ignore
+    // tslint:disable-next-line: no-object-mutation
     return (this.is = {
       alias: credentials.alias,
       pub: credentials.pub

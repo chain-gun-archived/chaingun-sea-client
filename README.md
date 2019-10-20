@@ -1,3 +1,3 @@
-# ChainGunSear
+# @chaingun/sea-client
 
-SEA support for ChainGun via @notabug/gun-sear
+SEA support for @chaingun/client
