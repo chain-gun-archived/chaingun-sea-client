@@ -291,10 +291,10 @@
     typedoc-default-themes "^0.6.0-0"
     typescript "3.5.x"
 
-"@chaingun/client@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@chaingun/client/-/client-0.0.24.tgz#4bb373daab8923a7d26dc24e63ab10c0e7fd331e"
-  integrity sha512-nWeUtpy+xTwU1aV7hz8QkuS7S4hB+ATFuAXen1kD9TyGAwW/s+KOjUMeeMUsU/4xkzTSM5O4sJGS/3BGb8FpFA==
+"@chaingun/client@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@chaingun/client/-/client-0.0.26.tgz#5bdee3b419fa6c7f144cea76db24cfaae38d49cc"
+  integrity sha512-CmPC3czBHZ0ZV7U5D4vFTzuW5Jq38PMeM8Pq9S4GW7goI6nlhwaUtz56rQ+r8MLgzzjIqxz4bBVUkChIsCS5rw==
   dependencies:
     "@chaingun/crdt" "^0.0.2"
     "@chaingun/types" "^0.0.3"
